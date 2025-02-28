@@ -1,14 +1,8 @@
-
-
 body {
-   
-    background-color: #171717;
-  color:#FFFFFF;
-        font-family: "DM Sans", serif;
-        
-      
+  background-color: #171717;
+  color: #ffffff;
+  font-family: "DM Sans", serif;
 }
-
 
 @tailwind base;
 @tailwind components;

@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="shadow-lg">
+    <nav className="shadow-lg fixed w-full bg-[#171717]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -80,7 +80,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
+      <div
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } md:hidden bg-[#171717] h-full`}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 h-[92vh]">
           <a
             href="#"
