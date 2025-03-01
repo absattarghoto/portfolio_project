@@ -14,7 +14,7 @@ const SkillSection = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-[#1E1E1E] p-8 rounded-2xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#212121] p-8 rounded-2xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               <p className="text-6xl font-bold text-gray-300">{item.percentage}</p>
               <span className="block text-2xl text-[#27AE60] mt-3">{item.skill}</span>
