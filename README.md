@@ -49,7 +49,7 @@ It serves as a **professional profile** to display my expertise in **Web Design 
 ## 📸 Screenshots
 
 
-  ![Homepage Screenshot](./public/portfolio_project.png)
+  ![Homepage Screenshot](./public/Images/portfolio_project.png)
 
 ## ⚙️ Installation  
 
