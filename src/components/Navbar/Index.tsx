@@ -1,4 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
+
+const navItems = [
+  { name: "Home", to: "herosection" },
+  { name: "About Us", to: "aboutsection" },
+  { name: "Skill Development", to: "skilldevelopment" },
+  { name: "Skill", to: "skillsection" },
+  { name: "Contact Us", to: "formsection" },
+];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +25,17 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {["About Us", "Services", "Contact Us"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium transition-colors duration-200"
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
 
@@ -37,7 +49,7 @@ const Navbar = () => {
               <span className="sr-only">
                 {isMenuOpen ? "Close menu" : "Open menu"}
               </span>
-              {/* Icons */}
+              {/* Hamburger icon */}
               <svg
                 className={`h-6 w-6 ${isMenuOpen ? "hidden" : "block"}`}
                 fill="none"
@@ -51,6 +63,7 @@ const Navbar = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
+              {/* Close icon */}
               <svg
                 className={`h-6 w-6 ${isMenuOpen ? "block" : "hidden"}`}
                 fill="none"
@@ -77,15 +90,18 @@ const Navbar = () => {
         style={{ height: "calc(100vh - 4rem)" }}
       >
         <div className="px-2 pt-4 pb-3 space-y-3 overflow-y-auto h-full text-center">
-          {["About Us", "Services", "Contact Us"].map((item) => (
-            <a
-              key={item}
-              href="#"
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              spy={true}
+              smooth={true}
+              duration={500}
               onClick={closeMenu}
-              className="text-white hover:text-gray-300 block px-3 py-3 text-base font-medium transition-colors duration-200"
+              className="text-white hover:text-gray-300 block px-3 py-3 text-base font-medium transition-colors duration-200 cursor-pointer"
             >
-              {item}
-            </a>
+              {item.name}
+            </Link>
           ))}
         </div>
       </div>
